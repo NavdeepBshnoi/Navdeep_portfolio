@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosthetic Arm Assembly | SolidWorks Project</title>
+
+  <!-- main CSS + icons -->
+  <link rel="stylesheet" href="../../style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- active link color override -->
+  <style>
+    .navbar a {
+      transition: color .3s, text-shadow .3s;
+    }
+    /* ensure active link is visible cyan */
+    .header .navbar a.active {
+      color: #0ef !important;
+      text-shadow: 0 0 10px #0ef !important;
+      font-weight: 600;
+      background: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="../../project-sections/solidworks-projects.html" class="logo">← Back</a>
+    <nav class="navbar">
+      <a href="#sketch">Sketch</a>
+      <a href="#parts">Parts</a>
+      <a href="#assembly">Assembly</a>
+      <a href="#readme">ReadMe</a>
+    </nav>
+  </header>
+
+  <!-- Sections -->
+  <section class="home" id="sketch">
+    <div class="home-content">
+      <h3>Step 1 – Sketching</h3>
+      <h1>Initial Design Phase</h1>
+      <p>
+        In this phase, 2D sketches for each prosthetic component were created in SolidWorks.
+        Geometrical relations, constraints, and dimensions were defined for precision and easy modification.
+      </p>
+    </div>
+    <div class="home-img">
+      <img src="../../images\solidworks\top-mechanical heart valve.png.png" alt="Sketching Image">
+    </div>
+  </section>
+
+  <section class="about" id="parts">
+    <div class="about-img">
+      <img src="../../images\solidworks\rside-mechanical heart valve.png.png" alt="Parts Design">
+    </div>
+    <div class="about-content">
+      <h2 class="heading">Step 2: <span>Parts Modeling</span></h2>
+      <h3>Component Creation</h3>
+      <p>
+        Each part of the prosthetic arm, including joints and connectors, was modeled with assigned material properties and appearance textures.
+      </p>
+    </div>
+  </section>
+
+  <section class="services" id="assembly">
+    <h2 class="heading">Step 3: <span>Assembly</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-cog"></i>
+        <h3>Assembly Overview</h3>
+        <p>
+          The modeled parts were assembled using various mates (coincident, concentric, parallel).
+          Motion simulation was performed to verify range of movement and avoid interference.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="readme">
+    <h2 class="heading">Step 4: <span>ReadMe / Conclusion</span></h2>
+    <p>
+      This project demonstrates the complete SolidWorks workflow from 2D sketching to 3D assembly.
+      Future work includes actuator integration and motion analysis coupling with ANSYS.
+    </p>
+    <a href="../../project-sections/solidworks-projects.html" class="btn">Back to SolidWorks</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-text"><p>© Navdeep | All Rights Reserved.</p></div>
+    <div class="footer-iconTop"><a href="#sketch"><i class="bx bx-up-arrow-alt"></i></a></div>
+  </footer>
+
+  <!-- main JS -->
+  <script src="../../script.js"></script>
+
+  <!-- scroll watcher with debug -->
+  <script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    console.log('Scroll watcher loaded');
+    const sections=document.querySelectorAll('section[id]');
+    const navLinks=document.querySelectorAll('.navbar a');
+
+    function updateActiveLink(){
+      const y=window.scrollY+150; // adjust for header height
+      let current='';
+      sections.forEach(sec=>{
+        if(y>=sec.offsetTop && y<sec.offsetTop+sec.offsetHeight){
+          current=sec.id;
+        }
+      });
+      navLinks.forEach(l=>{
+        l.classList.toggle('active', l.getAttribute('href')==='#'+current);
+      });
+
+      // log for debugging
+      if(current) console.log('ACTIVE:', current);
+    }
+
+    updateActiveLink();
+    window.addEventListener('scroll',updateActiveLink);
+  });
+  </script>
+</body>
+</html>

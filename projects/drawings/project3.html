@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anatomical Sketch | Drawings Project</title>
+
+  <link rel="stylesheet" href="../../style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <style>
+    /* Navbar links default style */
+    .navbar a {
+      transition: 0.3s;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Active link style */
+    .navbar a.active {
+      color: #0ef !important;
+      text-shadow: 0 0 10px #0ef !important;
+      font-weight: 600;
+    }
+
+    /* Optional: hover effect */
+    .navbar a:hover {
+      color: #0ef;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="../../project-sections/drawings-projects.html" class="logo">← Back</a>
+    <nav class="navbar">
+      <a href="#concept">Concept</a>
+      <a href="#sketch">Sketch</a>
+      <a href="#final">Final Drawing</a>
+      <a href="#readme">ReadMe</a>
+    </nav>
+  </header>
+
+  <!-- Section 1 -->
+  <section class="home" id="concept">
+    <div class="home-content">
+      <h3>Step 1 – Concept Design</h3>
+      <h1>Anatomical Sketch Project</h1>
+      <p>
+        The goal of this project was to create a precise anatomical hand sketch highlighting muscle structure and proportion. 
+        The sketch emphasizes line weight, shading, and correct anatomical alignment for educational use.
+      </p>
+    </div>
+    <div class="home-img">
+      <img src="../../images/DRAWING.png" alt="Anatomical Concept" />
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="about" id="sketch">
+    <div class="about-img">
+      <img src="../../images/DRAWING.png" alt="Rough Sketch" />
+    </div>
+    <div class="about-content">
+      <h2 class="heading">Step 2: <span>Initial Sketch</span></h2>
+      <p>
+        The first stage began with light pencil sketches, focusing on proportion and muscle curvature. 
+        Cross-contour lines were used to visualize depth and surface geometry before adding texture.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="services" id="final">
+    <h2 class="heading">Step 3: <span>Final Rendering</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-brush"></i>
+        <h3>Shading & Detailing</h3>
+        <p>
+          The final version includes realistic shading using graphite and digital touch-up for contrast correction.
+          Highlights were emphasized to display form, and the sketch was digitized for integration in the biomedical study guide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="contact" id="readme">
+    <h2 class="heading">Step 4: <span>ReadMe / Conclusion</span></h2>
+    <p>
+      This drawing demonstrates artistic precision and understanding of biomedical anatomy. 
+      The project reinforces the intersection between art and medical illustration. 
+      Future works may include colorized digital overlays and 3D anatomical visualization.
+    </p>
+    <a href="../../project-sections/drawings-projects.html" class="btn">Back to Drawings Gallery</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>© Navdeep | All Rights Reserved.</p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#concept"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".navbar a");
+
+      function updateActive() {
+        const scrollY = window.scrollY + 100; // adjust offset for header height
+        let current = "";
+
+        sections.forEach(sec => {
+          if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
+            current = sec.id;
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+        });
+      }
+
+      updateActive();
+      window.addEventListener("scroll", updateActive);
+    });
+  </script>
+</body>
+</html>

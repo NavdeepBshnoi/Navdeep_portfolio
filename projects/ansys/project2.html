@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stent Stress Simulation | ANSYS Project</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    .navbar a{transition:.3s}
+    .navbar a.active{color:#0ef!important;text-shadow:0 0 10px #0ef!important;font-weight:600}
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="../../project-sections/ansys-projects.html" class="logo">← Back</a>
+    <nav class="navbar">
+      <a href="#geometry">Geometry</a>
+      <a href="#meshing">Meshing</a>
+      <a href="#simulation">Simulation</a>
+      <a href="#readme">ReadMe</a>
+    </nav>
+  </header>
+
+  <section class="home" id="geometry">
+    <div class="home-content">
+      <h3>Step 1 – Geometry Setup</h3>
+      <h1>Biomedical Stent Model</h1>
+      <p>3D stent geometry was imported from SolidWorks and prepared for analysis using ANSYS SpaceClaim. 
+      Symmetry and fillets were optimized for mesh quality.</p>
+    </div>
+    <div class="home-img"><img src="../../images/ANSYS.png" alt="Stent Geometry"></div>
+  </section>
+
+  <section class="about" id="meshing">
+    <div class="about-img"><img src="../../images/ANSYS.png" alt="Meshing"></div>
+    <div class="about-content">
+      <h2 class="heading">Step 2: <span>Meshing</span></h2>
+      <p>Fine tetrahedral mesh applied at critical regions to capture stress gradients. 
+      Element size refined through convergence study for accurate results.</p>
+    </div>
+  </section>
+
+  <section class="services" id="simulation">
+    <h2 class="heading">Step 3: <span>Simulation Setup & Results</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-atom"></i>
+        <h3>Boundary Conditions & Analysis</h3>
+        <p>Fixed end constraints and internal pressure loads applied. 
+        von-Mises stress distribution was evaluated to assess material safety factors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="readme">
+    <h2 class="heading">Step 4: <span>ReadMe / Conclusion</span></h2>
+    <p>This simulation highlights mechanical strength and deformation patterns of a stent under pressure.  
+    Future studies will couple fluid-structure interaction for realistic flow conditions.</p>
+    <a href="../../project-sections/ansys-projects.html" class="btn">Back to ANSYS Gallery</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-text"><p>© Navdeep | All Rights Reserved.</p></div>
+    <div class="footer-iconTop"><a href="#geometry"><i class="bx bx-up-arrow-alt"></i></a></div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    const s=document.querySelectorAll('section[id]'),n=document.querySelectorAll('.navbar a');
+    function act(){const y=scrollY+150;let c='';s.forEach(e=>{if(y>=e.offsetTop&&y<e.offsetTop+e.offsetHeight)c=e.id});
+    n.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+c));}
+    act();addEventListener('scroll',act);
+  });
+  </script>
+</body>
+</html> -->

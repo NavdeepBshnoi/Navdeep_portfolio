@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reaction Timer Game | Python Project</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    .navbar a{transition:.3s;color:#fff}
+    .navbar a.active{color:#0ef!important;text-shadow:0 0 10px #0ef!important;font-weight:600}
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="../../project-sections/python-projects.html" class="logo">← Back</a>
+    <nav class="navbar">
+      <a href="#overview">Overview</a>
+      <a href="#code">Code</a>
+      <a href="#working">Working</a>
+      <a href="#readme">ReadMe</a>
+    </nav>
+  </header>
+
+  <section class="home" id="overview">
+    <div class="home-content">
+      <h3>Step 1 – Overview</h3>
+      <h1>Reaction Timer Game</h1>
+      <p>This Python GUI project measures human reaction time using Tkinter.
+      The player must click as soon as the color changes on screen; the delay is measured in milliseconds.</p>
+    </div>
+    <div class="home-img"><img src="../../images/PYTHON.png" alt="Python Game Overview"></div>
+  </section>
+
+  <section class="about" id="code">
+    <div class="about-img"><img src="../../images/PYTHON.png" alt="Python Code"></div>
+    <div class="about-content">
+      <h2 class="heading">Step 2: <span>Source Code</span></h2>
+      <p>The code uses Tkinter for GUI and time library for delay calculation.
+      Randomized color changes ensure unpredictability and fair tests.</p>
+    </div>
+  </section>
+
+  <section class="services" id="working">
+    <h2 class="heading">Step 3: <span>Working Mechanism</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-joystick"></i>
+        <h3>Gameplay Logic</h3>
+        <p>When “Start” is pressed, the window waits a random time then flashes green. 
+        The user clicks instantly; the program calculates reaction delay and logs high scores.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="readme">
+    <h2 class="heading">Step 4: <span>ReadMe / Conclusion</span></h2>
+    <p>This project demonstrates event handling, GUI design, and real-time logic in Python.  
+    Future updates include leaderboard storage and difficulty modes.</p>
+    <a href="../../project-sections/python-projects.html" class="btn">Back to Python Gallery</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-text"><p>© Navdeep | All Rights Reserved.</p></div>
+    <div class="footer-iconTop"><a href="#overview"><i class="bx bx-up-arrow-alt"></i></a></div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    const s=document.querySelectorAll('section[id]'),n=document.querySelectorAll('.navbar a');
+    function act(){const y=scrollY+150;let c='';s.forEach(e=>{if(y>=e.offsetTop&&y<e.offsetTop+e.offsetHeight)c=e.id});
+    n.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+c));}
+    act();addEventListener('scroll',act);
+  });
+  </script>
+</body>
+</html>

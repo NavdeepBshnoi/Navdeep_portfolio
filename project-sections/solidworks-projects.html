@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolidWorks Projects | Navdeep</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <style>
+    body {
+      background-color: #1f242d;
+      color: #fff;
+    }
+
+    .portfolio {
+      padding: 100px 5%;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    /* This forces exactly 2 columns */
+    .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2.5rem; /* Adds space between the boxes */
+    max-width: 1200px; /* Keeps the grid from getting too wide on huge screens */
+    margin: 0 auto; /* Centers the grid on the page */
+  }
+
+/* Make it 1 column on mobile phones so it doesn't look squished */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+    .portfolio-box {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0 1rem #0ef;
+      background: #323946;
+      transition: 0.3s ease;
+    }
+
+    .portfolio-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 1.5rem #0ef;
+    }
+
+    .portfolio-box img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .portfolio-layer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .portfolio-box:hover .portfolio-layer {
+      opacity: 1;
+    }
+
+    .portfolio-layer h4 {
+      font-size: 2rem;
+      color: #0ef;
+    }
+
+    .portfolio-layer p {
+      text-align: center;
+      padding: 0 1rem;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .portfolio-layer a {
+      margin-top: 10px;
+      color: #0ef;
+      font-size: 2rem;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 10px 25px;
+      background: #0ef;
+      color: #1f242d;
+      border-radius: 20px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background: #fff;
+      color: #1f242d;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="../index.html#portfolio" class="logo">← Back</a>
+  </header>
+
+  <section class="portfolio" id="solidworks-projects">
+    <h2 class="heading">SolidWorks <span>Projects</span></h2>
+
+    <div class="portfolio-container">
+      <!-- Project 1 -->
+      <div class="portfolio-box">
+        <img src="../images\solidworks\close-stethoscope.png.png" alt="Stethoscope">
+        <div class="portfolio-layer">
+          <h4>Stethoscope Assembly</h4>
+          <p>3D design of Stethoscope model using SolidWorks.</p>
+          <!-- <a href="../projects/solidworks/project1.html"><i class='bx bx-link-external'></i></a> -->
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-box">
+        <img src="../images\solidworks\iso-mechanical heart valve.png.png" alt="Mechanical Heart Valve">
+        <div class="portfolio-layer">
+          <h4>Mechanical Heart Valve</h4>
+          <p>3D modeling and motion study of Mechanical Heart Valve.</p>
+          <!-- <a href="../projects/solidworks/project2.html"><i class='bx bx-link-external'></i></a> -->
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-box">
+        <img src="../images\solidworks\front-hipimplant.png.png" alt="Femoral Prosthesis">
+        <div class="portfolio-layer">
+          <h4>Femoral Prosthesis</h4>
+          <p>3D modeling of Femoral Prosthesis.
+            This device is used in orthopedic surgery to replace a damaged hip joint.</p>
+          <!-- <a href="../projects/solidworks/project3.html"><i class='bx bx-link-external'></i></a> -->
+        </div>
+      </div>
+
+    <!-- Project 4  -->
+      <div class="portfolio-box">
+        <img src="../images\solidworks\stent.png.png" alt="Cardiovascular Stent">
+        <div class="portfolio-layer">
+          <h4>Cardiovascular Stent</h4>
+          <p>Cardiovascular Stent is designed to be implanted in coronary arteries clogged by plaque.
+             It hold the artery open, restoring proper blood flow to the heart muscle.</p>
+          <!-- <a href="../projects/solidworks/project4.html"><i class='bx bx-link-external'></i></a> -->
+        </div>
+      </div>
+    
+    </div>
+    <div style="text-align:center;">
+      <a href="../index.html#portfolio" class="btn-back">Back to Main Portfolio</a>
+    </div>
+  </section>
+
+</body>
+</html>
